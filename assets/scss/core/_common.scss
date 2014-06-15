@@ -1,0 +1,9 @@
+.wrapper{
+  @include clearfix;
+  @include fill-parent;
+
+  @include media($wide) {
+    margin:0 auto;
+    width:1200px;
+  }
+}

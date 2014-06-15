@@ -1,0 +1,35 @@
+header[role=banner] nav{
+
+  @include media($tablet) {
+    float:right;
+  }
+
+  a{
+    color:$dark-gray;
+    display:block;
+    font-size:1.5em;
+    text-align:center;
+
+    &:hover{
+      color:lighten($dark-gray, 15);
+    }
+
+    @include media($tablet) {
+      line-height:100px;
+    }
+  }
+
+
+  li{
+
+
+    @include media($tablet) {
+      display:inline-block;
+      padding:0 0 0 20px;
+    }
+
+    @include media($desktop) {
+      padding:0 0 0 30px;
+    }
+  }
+}
