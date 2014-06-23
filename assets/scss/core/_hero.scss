@@ -1,0 +1,69 @@
+.hero {
+  $hero-background:desaturate($base-accent-color, 30);
+  $hero-color:$white;
+
+  //background-color:$hero-background;  //switch to using opacity
+  background-position:top;
+  background-repeat:no-repeat;
+  background-size:cover;
+  margin-bottom:2em;
+  padding-bottom:4em;
+  position:relative;
+  z-index:1;
+
+  &:after{
+    background-color:$hero-background;
+    background-color:rgba($hero-background, 0.6);
+    content:'';
+    z-index:2;
+    @include position(absolute, 0px 0px 0px 0px);
+  }
+
+  .hero-logo img {
+    height:3em;
+    margin-bottom:1em;
+  }
+
+  .hero-inner {
+    color:$white;
+    margin:auto;
+    padding:3em;
+    position:relative;
+    text-align:center;
+    z-index:3;
+
+    @include outer-container;
+    @include clearfix;
+
+    button, .button {
+      font-size:$base-font-size;
+      outline:none;
+
+      @include button(simple, $base-accent-color);
+    }
+
+    .hero-copy {
+      text-align:center;
+
+      h1 {
+        font-size:1.4em;
+        margin-bottom:0.2em;
+
+        @include media($desktop) {
+          font-size:1.8em;
+        }
+      }
+
+      p {
+        font-weight:200;
+        margin:auto;
+        margin-bottom:3em;
+
+        @include media($desktop) {
+          font-size:1.2em;
+          max-width:40%;
+        }
+      }
+    }
+  }
+}

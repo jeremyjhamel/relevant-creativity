@@ -2,7 +2,14 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 @import 'base/base';
+@import 'font-awesome/font-awesome';
 
 @import 'core/common';
 @import 'core/header';
 @import 'core/navigation';
+@import 'core/hero';
+@import 'core/bullets';
+@import 'core/content';
+@import 'core/grid';
+
+@import 'core/footer';

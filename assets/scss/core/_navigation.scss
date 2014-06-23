@@ -1,29 +1,47 @@
 header[role=banner] nav{
+  clear:both;
+  padding:20px 0 0 0;
 
   @include media($tablet) {
+    clear:none;
     float:right;
+    padding:0;
   }
 
   a{
     color:$dark-gray;
     display:block;
-    font-size:1.5em;
+    padding:10px 0;
     text-align:center;
+
+    @include transition (all 0.3s ease-in-out);
 
     &:hover{
       color:lighten($dark-gray, 15);
     }
 
     @include media($tablet) {
-      line-height:100px;
+      //font-size:1.5em;
+      line-height:80px;
+      padding:0;
+    }
+  }
+
+  ul{
+    display:none;
+
+    @include media($tablet) {
+      display:block;
     }
   }
 
 
   li{
-
+    border-top:1px solid $base-border-color;
+    display:block;
 
     @include media($tablet) {
+      border:0 none;
       display:inline-block;
       padding:0 0 0 20px;
     }
@@ -31,5 +49,11 @@ header[role=banner] nav{
     @include media($desktop) {
       padding:0 0 0 30px;
     }
+  }
+}
+
+.compact header[role=banner] nav{
+  a{
+    line-height:50px;
   }
 }

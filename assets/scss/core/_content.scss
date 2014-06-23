@@ -1,0 +1,56 @@
+.top{
+  position:relative;
+  top:92px;
+
+  @include media($tablet) {
+    top:122px;
+  }
+}
+
+.main-content{
+  padding:0 20px;
+  text-align:center;
+
+  @include media($tablet) {
+    padding:0 50px;
+  }
+
+  @include media($wide) {
+    padding:0;
+  }
+}
+
+.header{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height:300px;
+  position:relative;
+  width:100%;
+
+  @include media($desktop) {
+    height:500px;
+  }
+}
+
+
+h2.line{
+  border-bottom:1px solid $light-gray;
+  border-top:1px solid $light-gray;
+  color:$medium-gray;
+  font-size:1.4em;
+  font-weight:300;
+  margin:0.5em 0;
+
+  @include media($desktop) {
+    background:url(../images/line.jpg) repeat-x left center;
+    border:0 none;
+
+    span{
+      background:$white;
+      padding:0 30px;
+      position:relative;
+    }
+
+  }
+}
